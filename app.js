@@ -15,7 +15,7 @@ app.use(express.static("public"));
 
 
 // ---------------- Mongoose server starting ----------------------
-mongoose.connect("mongodb+srv://harsh9539:Harsh9539@cluster0.egujj.mongodb.net/todolistDB",{useNewUrlParser:true})
+mongoose.connect("mongodb+srv://${process.env.USERNAME}:#{process.env.PASSWORD}@cluster0.egujj.mongodb.net/todolistDB",{useNewUrlParser:true})
 
 const itemsSchema = {
   name: String
